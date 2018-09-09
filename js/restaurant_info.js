@@ -174,6 +174,7 @@ fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
   li.innerHTML = restaurant.name;
+  li.tabIndex = 1;
   breadcrumb.appendChild(li);
 }
 
