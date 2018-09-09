@@ -214,6 +214,9 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+/**
+* Register Service Worker
+*/
 registerServiceWorker = () => {
   if(!navigator.serviceWorker) return;
 
