@@ -174,9 +174,13 @@ createReviewHTML = (review) => {
 fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
-  li.innerHTML = restaurant.name;
-  li.tabIndex = 1;
+  const anchor = document.createElement('a');
+  anchor.innerHTML = restaurant.name;
+  anchor.tabIndex = 1;
+  anchor.href = DBHelper.urlForRestaurant(restaurant);
+  anchor.setAttribute("aria-current", "page");
   breadcrumb.appendChild(li);
+  li.appendChild(anchor);
 }
 
 /**

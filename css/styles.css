@@ -79,6 +79,7 @@ nav h1 a {
     align-items: center;
     justify-content: center;
     /*width: calc(50% - 80px);*/
+    width: 100%;
 }
 
 /* Display list items side by side */
@@ -294,11 +295,22 @@ nav h1 a {
 }
 
 @media screen and (min-width: 1024px){
-  body {
-    width: 1024px;
-    margin: 10px auto;
+  #restaurants-list li {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
   }
-
+  #restaurant-container {
+    width: 40%;
+  }
+  #reviews-container {
+    width: 40%;
+  }
+  #restaurant-details {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
 
 
